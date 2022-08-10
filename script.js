@@ -1,47 +1,31 @@
 // Question One
+let main = document.querySelector('.container');
+let class_one = document.createElement('input');
+class_one.setAttribute('type', 'input');
+class_one.placeholder = 'Class'
+
+let subject = document.createElement('input');
+subject.setAttribute('type', 'input');
+subject.placeholder = 'Subject'
+
+let date = document.createElement('input');
+date.setAttribute('type', 'date');
+
+main.appendChild(class_one);
+main.appendChild(subject);
+main.appendChild(date);
+
+
 
 function userInputs() {
-    var main = document.querySelector('.container');
-    // while (main.hasChildNodes) {
-    //     main.removeChild(main.lastChild);   
-    // }
+    class_one = class_one.value;
+    subject = subject.value;
+    date = date.value;
 
-    // for (var i = 0; i < main, i++;) {
-    //     main.appendChild(document.createTextNode('Class: ' + i));
-    //     var inputappendChild(document.createElement('input'));
+    main.innerHTML = class_one + " " + subject + " " + date
 
-
-    // }
-
-    let divClass = document.createElement('input');
-    divClass.type = 'text';
-    divClass.placeholder = 'class';
-    main.appendChild(divClass);
-
-    let subject = document.createElement('input');
-    subject.type = 'text';
-    subject.placeholder = 'subject';
-    main.appendChild(subject);
-
-    let date = document.createElement('input');
-    date.type = 'date';
-    date.placeholder = 'date';
-    main.appendChild(date);
-
-    if (divClass.hasChildNodes()) {
-        divClass.innerHTML = ' '
-    }
-
-    disableButtons();
 }
 
-function disableButtons() {
-    let button = document.getElementById('sub-btn');
-    if (userInputs() === 2) {
-        button.disabled = true;
-
-    }
-}
 
 var hopperLab = {
     name: "bar",
